@@ -7,24 +7,31 @@
   
   <!-- Incluindo o Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Fonte para a marca -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   
   <!-- Estilos Personalizados -->
   <style>
     body {
-      background-color: #3A4F69;
+      /* degradê do fundo */
+      background: #e4e4e4ff;
       color: #fff;
       font-family: 'Arial', sans-serif;
-      height: 100vh;
+      min-height: 100vh;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+    /* Container centralizado e com sombra mais pronunciada */
     .container {
-      background-color: #fff;
+      background:linear-gradient(135deg, #2f5066 0%, #597792 50%, #7aa1c0 100%);
       border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 20px 10px; /* reduzido padding lateral para mobile */
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      padding: 30px 20px; /* padding confortável em mobile */
       max-width: 600px;
       text-align: center;
-      margin: 20px 15px; /* margem lateral e superior segura */
-      width: auto; /* permite que o container se ajuste à margem */
+      margin: 20px auto; /* centraliza horizontalmente em todas as larguras */
+      width: calc(100% - 40px); /* respeita margens laterais */
     }
     
     /* Ajustes para desktop */
@@ -32,7 +39,28 @@
       .container {
         margin: 50px auto; /* centraliza e restaura margem superior em desktop */
         padding: 40px; /* restaura padding completo em desktop */
+        width: auto;
       }
+    }
+
+    /* Marca no topo (estilo da imagem) */
+    .site-header {
+      padding: 18px 20px 0 20px;
+      text-align: left;
+    }
+    .brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      color: #d8d8d8ff;
+      letter-spacing: 1px;
+      text-transform: lowercase;
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    @media (min-width: 768px) {
+      .brand { font-size: 44px; }
     }
     h1 {
       font-size: 28px;
@@ -41,8 +69,8 @@
       margin-bottom: 20px;
     }
     .btn-custom {
-      background-color: #3A4F69;
-      color: #fff;
+      background-color: #fff;
+      color: #3A4F69;
       font-weight: 600;
       padding: 15px 30px;
       border-radius: 30px;
@@ -54,6 +82,7 @@
     .btn-custom:hover {
       background-color: #2c3e50;
       transform: translateY(-5px);
+      color: #fff;
 
       
     }
@@ -76,9 +105,10 @@
   </style>
 </head>
 <body>
+ 
 
   <div class="container">
-    <h1>Umani Mulher</h1>
+      <h1 class="brand">umani</h1>
     
     <!-- Video Embedding -->
     <div class="iframe-container">
