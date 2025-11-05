@@ -14,13 +14,17 @@
   <style>
     body {
       /* degradê do fundo */
-      background: #e4e4e4ff;
+      background-color: #d5d2d2ff;
       color: #fff;
       font-family: 'Arial', sans-serif;
       min-height: 100vh;
       margin: 0;
+      padding: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     /* Container centralizado e com sombra mais pronunciada */
     .container {
@@ -28,18 +32,19 @@
       border-radius: 20px;
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
       padding: 30px 20px; /* padding confortável em mobile */
-      max-width: 600px;
+      max-width: 900px;
       text-align: center;
-      margin: 20px auto; /* centraliza horizontalmente em todas as larguras */
+      margin: 0 auto; /* remove margem vertical para centralização perfeita */
       width: calc(100% - 40px); /* respeita margens laterais */
     }
     
     /* Ajustes para desktop */
     @media (min-width: 768px) {
       .container {
-        margin: 50px auto; /* centraliza e restaura margem superior em desktop */
-        padding: 40px; /* restaura padding completo em desktop */
-        width: auto;
+        margin: 0 auto; /* mantém centralizado em desktop */
+        padding: 50px 48px; /* padding maior em desktop */
+        width: 90%;
+        max-width: 900px;
       }
     }
 
@@ -52,7 +57,7 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
       font-size: 36px;
-      color: #d8d8d8ff;
+      color: #e7d7c9;
       letter-spacing: 1px;
       text-transform: lowercase;
       display: inline-block;
