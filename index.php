@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UMANI</title>
+  
+  <!-- Incluindo o Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Estilos Personalizados -->
+  <style>
+    body {
+      background-color: #3A4F69;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .btn-custom {
+      background-color: #3A4F69;
+      color: #fff;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 30px;
+      transition: all 0.3s;
+      display: inline-block; /* ensure vertical margins and centering work */
+      margin-top: 20px;     /* explicit spacing from the video */
+      text-decoration: none; /* remove underline from the anchor */
+    }
+    .btn-custom:hover {
+      background-color: #2c3e50;
+      transform: translateY(-5px);
+
+      
+    }
+    .iframe-container {
+      margin-top: 20px;
+      margin-bottom: 20px; /* add space below the video */
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Umani Mulher</h1>
+    
+    <!-- Video Embedding -->
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Form Link -->
+    <a href="https://forms.gle/FORM_ID" class="btn-custom mt-4" target="_blank">Preencher Formulário</a>
+  </div>
+
+  <!-- Incluindo os scripts do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
