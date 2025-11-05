@@ -20,10 +20,19 @@
       background-color: #fff;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      padding: 40px;
+      padding: 40px 20px; /* reduzido padding lateral para mobile */
       max-width: 600px;
       text-align: center;
-      margin-top: 50px;
+      margin: 20px 15px; /* margem lateral e superior segura */
+      width: auto; /* permite que o container se ajuste à margem */
+    }
+    
+    /* Ajustes para desktop */
+    @media (min-width: 768px) {
+      .container {
+        margin: 50px auto; /* centraliza e restaura margem superior em desktop */
+        padding: 40px; /* restaura padding completo em desktop */
+      }
     }
     h1 {
       font-size: 28px;
