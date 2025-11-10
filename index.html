@@ -4,129 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UMANI</title>
-  
-  <!-- Incluindo o Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Fonte para a marca -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  
-  <!-- Estilos Personalizados -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      /* degradê do fundo */
-      background-color: #d5d2d2ff;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      min-height: 100vh;
+    /* Resetando o estilo básico */
+    * {
       margin: 0;
       padding: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Container centralizado e com sombra mais pronunciada */
-    .container {
-      background:linear-gradient(135deg, #2f5066 0%, #597792 50%, #7aa1c0 100%);
-      border-radius: 20px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-      padding: 30px 20px; /* padding confortável em mobile */
-      max-width: 900px;
-      text-align: center;
-      margin: 0 auto; /* remove margem vertical para centralização perfeita */
-      width: calc(100% - 40px); /* respeita margens laterais */
-    }
-    
-    /* Ajustes para desktop */
-    @media (min-width: 768px) {
-      .container {
-        margin: 0 auto; /* mantém centralizado em desktop */
-        padding: 50px 48px; /* padding maior em desktop */
-        width: 90%;
-        max-width: 900px;
-      }
+      box-sizing: border-box;
     }
 
-    /* Marca no topo (estilo da imagem) */
-    .site-header {
-      padding: 18px 20px 0 20px;
-      text-align: left;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #3A4F69;
+      display: flex;
+      justify-content: center; /* center horizontally */
+      align-items: flex-start; /* align to top so content can scroll on small screens */
+      min-height: 100vh; /* allow the page to grow and scroll rather than being fixed */
+      flex-direction: column;
+      color: #fff;
+      padding: 40px 16px; /* spacing so container isn't flush to viewport edges */
     }
-    .brand {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 36px;
-      color: #e7d7c9;
-      letter-spacing: 1px;
-      text-transform: lowercase;
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 6px;
+
+    .container {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 32px;
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+      margin: 24px auto; /* center horizontally and give vertical spacing */
+      transform: none;
     }
-    @media (min-width: 768px) {
-      .brand { font-size: 44px; }
-    }
+
     h1 {
       font-size: 28px;
       font-weight: 600;
       color: #333;
       margin-bottom: 20px;
     }
-    .btn-custom {
-      background-color: #fff;
-      color: #3A4F69;
-      font-weight: 600;
-      padding: 15px 30px;
+
+    .btn {
+      display: block;
+      background-color: #3A4F69;
+      color: #fff;
+      padding: 15px 0;
+      margin: 15px 0;
+      text-decoration: none;
       border-radius: 30px;
-      transition: all 0.3s;
-      display: inline-block; /* ensure vertical margins and centering work */
-      margin-top: 20px;     /* explicit spacing from the video */
-      text-decoration: none; /* remove underline from the anchor */
+      font-size: 18px;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
-    .btn-custom:hover {
+
+    .btn:hover {
       background-color: #2c3e50;
       transform: translateY(-5px);
-      color: #fff;
+    }
 
-      
+    .btn:active {
+      background-color: #1a2531;
+      transform: translateY(0);
     }
-    .iframe-container {
+
+    iframe {
       margin-top: 20px;
-      margin-bottom: 20px; /* add space below the video */
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
-      overflow: hidden;
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      aspect-ratio: 16/9; /* makes the iframe responsive maintaining 16:9 ratio */
+      height: auto;
+      border: none;
       border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 480px) {
+      .container {
+        padding: 18px;
+        border-radius: 12px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .btn {
+        padding: 12px 0;
+        font-size: 16px;
+        border-radius: 24px;
+      }
+
+      iframe {
+        aspect-ratio: 16/9;
+      }
+    }
+
+    .links {
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
- 
-
   <div class="container">
-      <h1 class="brand">umani</h1>
-    
+    <h1>Umani Mulher</h1>
+
     <!-- Video Embedding -->
-    <div class="iframe-container">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <div id="video-container"></div>
+    <script>
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://youtube.com/shorts/6HAmL7YmLGM?si=YyYkyJNQc_8sizny";
+      iframe.width = "560";
+      iframe.height = "315";
+      iframe.frameborder = "0";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      document.getElementById("video-container").appendChild(iframe);
+    </script>
 
     <!-- Form Link -->
-    <a href="https://forms.gle/FORM_ID" class="btn-custom mt-4" target="_blank">Preencher Formulário</a>
+    <a href="https://forms.gle/Mr9W2u1Xbd71iLRn8" class="btn" target="_blank">Preencher Formulário</a>
   </div>
-
-  <!-- Incluindo os scripts do Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
 </body>
 </html>
